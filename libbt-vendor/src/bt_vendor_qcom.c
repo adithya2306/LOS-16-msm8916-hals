@@ -488,7 +488,7 @@ static int bt_powerup(int en )
 
     if (q->soc_type >= BT_SOC_CHEROKEE && q->soc_type < BT_SOC_RESERVED) {
        ALOGI("open bt power devnode,send ioctl power op  :%d ",en);
-       fd_btpower = open(BT_PWR_CNTRL_DEVICE, O_RDWR, O_NONBLOCK);
+       fd_btpower = open(BT_PWR_CNTRL_DEVICE, O_CREAT | O_RDWR, O_NONBLOCK);
        if (fd_btpower < 0) {
            ALOGE("\nfailed to open bt device error = (%s)\n",strerror(errno));
 #ifdef WIFI_BT_STATUS_SYNC
