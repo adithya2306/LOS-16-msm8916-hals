@@ -106,7 +106,7 @@ LOCAL_VENDOR_MODULE             := true
 LOCAL_CFLAGS                    := $(libmm-vdec-def) -Werror
 LOCAL_C_INCLUDES                += $(libmm-vdec-inc)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(libmm-vdec-add-dep)
-
+LOCAL_HEADER_LIBRARIES  += display_headers_kek
 LOCAL_PRELINK_MODULE    := false
 LOCAL_SHARED_LIBRARIES  := liblog libutils libui libcutils libdl
 
@@ -149,7 +149,7 @@ LOCAL_PRELINK_MODULE    := false
 LOCAL_SHARED_LIBRARIES  := liblog libutils libbinder libcutils libdl
 
 LOCAL_SHARED_LIBRARIES  += libqdMetaData
-
+LOCAL_HEADER_LIBRARIES += display_headers_kek
 LOCAL_SRC_FILES         := src/frameparser.cpp
 LOCAL_SRC_FILES         += src/h264_utils.cpp
 LOCAL_SRC_FILES         += src/ts_parser.cpp
@@ -187,7 +187,7 @@ LOCAL_VENDOR_MODULE           := true
 LOCAL_CFLAGS                  := $(libmm-vdec-def)
 LOCAL_C_INCLUDES              += $(libmm-vdec-inc)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(libmm-vdec-add-dep)
-
+LOCAL_HEADER_LIBRARIES += display_headers_kek
 LOCAL_PRELINK_MODULE          := false
 LOCAL_SHARED_LIBRARIES        := liblog libcutils
 LOCAL_SHARED_LIBRARIES        += libswvdec
